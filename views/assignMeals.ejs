@@ -14,10 +14,11 @@
       
     <h3><center>Supervisor Dashboard : Assign Meals</center></h3>
     <form action="/logout" method="post">
-      <div class='buton' style="width: 300px;height:20px;background-color:yellow;margin-top:7px;">
-        <input style="background-color:black;width: 90px;height: 35px; margin-bottom: 10px;font-size: 16px;color:yellow" formaction="/logout" type="submit"  value="Logout" >
-        <br>
-        <input style="background-color:black;width: 90px;height: 35px; margin-bottom: 10px;font-size: 16px;color:yellow" formaction="/backSupervisor" type="submit"  value="Home" >
+      <div class='buton' style="width: 300px;height:20px;margin-top:0px;">
+        <input style="border-color:rgb(89,198,247);background-color:rgb(89,198,247);width: 90px;height: 35px; margin-top: 620px;margin-left:575px; font-size: 16px;color:white" formaction="/logout" type="submit"  value="Logout" >
+      </div>
+      <div class='buton' style="width: 300px;height:20px;margin-top:0px;">
+        <input style="border-color:rgb(89,198,247);background-color:rgb(89,198,247);width: 90px;height: 35px; margin-top: 600px;margin-left:775px;font-size: 16px;color:white" formaction="/backSupervisor" type="submit"  value="Home" >
       </div>
   </form >
    
@@ -25,34 +26,34 @@
      
         <form id ="contact" action="/addAssignedMeals" method="post">
          <h3 style="font-size: 40px;margin-bottom:10px ;">Assign Daily Meals</h3>   
-         <div style="max-width: 450px; background-color: green; font-size: 18px; text-align:  center;">
+         <div style="max-width: 450px; background-color: rgb(89,198,247); font-size: 18px; text-align:  center;">
           <strong></strong><%= Error %>
-          <strong ><a style="color:red" href="/assignMealsNotify"><%=Link%></a></strong>
+          <strong ><a style="color:rgb(89,198,247)" href="/assignMealsNotify"><%=Link%></a></strong>
         </div>    
    <h3>Enter Details</h3>
 	<div>
-                  <label for="catererID">caterer ID</label>
-                  <input type="number" id="catererID" name="catererID" placeholder="Enter school ID" required/>
+                  <label for="catererID">Caterer ID</label>
+                  <input type="number" id="catererID" name="catererID" required/>
             </div>
 			<div>
-                  <label for="schoolID">school ID</label>
-                  <input type="number" id="schoolID" name="schoolID" placeholder="Enter school ID" required/>
+                  <label for="schoolID">School ID</label>
+                  <input type="number" id="schoolID" name="schoolID" required/>
             </div>
 			<div>
                   <label for="transporterID">Transporter ID</label>
-                  <input type="number" id="transporterID" name="transporterID" placeholder="Enter transporter ID" required/>
+                  <input type="number" id="transporterID" name="transporterID" required/>
             </div>
 			<div>
                   <label for="mealCode">Meal Code</label>
-                  <input type="number" id="mealCode" name="mealCode" placeholder="Enter meal Code" required/>
+                  <input type="number" id="mealCode" name="mealCode" required/>
             </div>
 			<div>
                   <label for="studentCount">Student Count</label>
-                  <input type="number" id="studentCount" name="studentCount" placeholder="Enter student Count" required/>
+                  <input type="number" id="studentCount" name="studentCount" required/>
             </div>
 			
                   <div class='buton'>
-                  <input style="background-color: blue; font-size: 16px; border-color: blue;" type="submit"  value="AddDailyMeal" >
+                  <input style="color:white;background-color: rgb(89,198,247); font-size: 16px; border-color: rgb(89,198,247);" type="submit"  value="AddDailyMeal" >
                   </div>
       
         </form>

@@ -11,28 +11,30 @@
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     </head>
 	<form action="/logout" method="post">
-        <div class='buton' style="width: 300px;height:20px;background-color:yellow;margin-top:7px;">
-      <input style="background-color:black;width: 90px;height: 35px; margin-bottom: 10px;font-size: 16px;color:yellow" formaction="/logout" type="submit"  value="Home">
-	</div>
+        <div class='buton' style="width: 300px;height:20px;margin-top:7px;">
+      <input style="background-color:rgb(255,100,100);border-color:rgb(255,100,100);width: 150px;height: 35px;margin-top:75px;margin-left:650px;font-size: 16px;color:black" formaction="/logout" type="submit"  value="Home">
+    </div>
 	</form>
     <body>
     <h3 ><center>Auditor Dashboard</center></h3>
+    <br>
+    <br>
      <div class="container"> 
         <form style="margin-top:50px;" id ="contact" action="/mealDetailByBlockchain" method="post">
             <div >
                 <label for="mealid"><font color="black"><center>Please enter meal ID</center></font></label>
             <center>
-            <input style="width:62% ;" type="Number" id="mealid" name="mealid" placeholder="Please enter meal ID"  />
+            <input style="width:62% ;" type="Number" id="mealid" name="mealid"/>
             <div class='buton'>
-                <input style="background-color: blue; font-size: 16px; border-color: blue;" type="submit"  value="View">
+                <input style="color:white;background-color: rgb(89,198,247); width:400px ; font-size: 17px; border-color: rgb(89,198,247);" type="submit"  value="View">
             </div>
 			</center>
 			</div>
 			</div>
         </form >
-		<form style=" margin-top:10px;width:900px;background-color:azure;margin-left: 225px;">   
+		<form style=" margin-top:10px;width:900px;background-color:grey;margin-left: 250px;">   
         <h3 style=" font-size: 20px;color: black;"><center>Blockchain Verified Meal Details</center></h3>
-        <table  style="border-collapse:collapse;color:black;width:900px;margin-top:10px;padding:10px;border: 2px solid grey  ;"  >
+        <table  style="border-collapse:collapse;color:black;width:900px;margin-top:10px;padding:10px;border: 2px solid black;"  >
         <thead>
         <%if (records.length>0){ %>
         <% records.forEach(function(row){ %>

@@ -8,15 +8,15 @@
 <body>
     <h3><center>Secure and Transparent Mid Day Meals using Blockchain and IoT</center></h3>
     <form action="/logout" method="post">
-		<div class='buton' style="width: 300px;height:20px;background-color:yellow;margin-top:7px;">
+		<div class='buton' style="width: 300px;height:20px;margin-top:5px;">
         
-			<input style="background-color:black;width:45x;height: 35px; margin-bottom: 10px;font-size: 16px;color:yellow" formaction="/submitFeedback" type="submit"  value="Submit Feedback" >
+			<input style="background-color:rgb(89,198,247);width:45x;height: 35px; margin-top:600px;margin-left: 650px;font-size: 16px;color:white;border-color:rgb(89,198,247)" formaction="/submitFeedback" type="submit"  value="Submit Feedback" >
 		</div>
 	</form >
     <div class="container">
 		<form id ="contact" action="/login" method="post">
 			<h3>Login Portal</h3>
-			<div style="max-width: 450px; background-color: rgb(0, 14, 204); font-size: 18px; text-align:  center;">
+			<div style="max-width: 450px; background-color: rgb(89,198,247); font-size: 18px; text-align:  center;">
 			<strong></strong><%= Error %>
 			</div> 
 			<div class="form-group">
@@ -39,20 +39,19 @@
             <input Style="width:4%" type="radio" id="Transporter" name="Role" value="Transporter">
             Transporter</label>
 			<label style="margin-left:0% ;"for="Caterer">
-            <input Style="width:4%" type="radio" id="Caterer" name="Role" value="Caterer">
+            <input Style="width:8%" type="radio" id="Caterer" name="Role" value="Caterer">
             Caterer</label>
 			</div>
 			<div class='buton'>
-			<input style="background-color: blue; font-size: 16px; border-color: blue;" type="submit"  value="Login" >
+			<input style="color:white;background-color:rgb(89,198,247); font-size: 16px; border-color: rgb(89,198,247);" type="submit"  value="Login" >
 			</div>
+			<br>
+			<input type="button" style="color:white;background-color: rgb(89,198,247); width:400px ; font-size: 17px; border-color: rgb(89,198,247);" onclick="location.href='/changePass';" value="Change Login Credentials." />
+			<br>
+			<input type="button" style="color:white; background-color: rgb(89,198,247); width:400px ; font-size: 17px; border-color:rgb(89,198,247);" onclick="location.href='/searchMeals';" value="Search for MealID by School ID or Caterer ID." />
+			<br>
+			<input type="button" style="color:white; background-color: rgb(89,198,247); width:400px ; font-size: 17px; border-color: rgb(89,198,247));" onclick="location.href='/verifyMeals';" value="Verify mealDetails by MealID." />
 			</form>
-			<center>
-			<a href="/changePass">Click here to change Login Credentials.</a>
-			<br>
-			<a href="/searchMeals">Click here to search for MealID by School ID or Caterer ID.</a>
-			<br>
-			<a href="/verifyMeals">Click here to verify mealDetails by MealID.</a>
-			</center>
 			</div>
 			</div>
 </body> 

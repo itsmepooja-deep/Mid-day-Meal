@@ -9,10 +9,11 @@
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     </head>
     <body>
-    <h3><center>Beneficiary Dashboard : Submit Feedback</center></h3>
+	<h3><center>Beneficiary Dashboard : Submit Feedback</center></h3>
+	<br>
     <form action="/logout" method="post">
-		<div class='buton' style="width: 300px;height:20px;background-color:yellow;margin-top:7px;">
-      <input style="background-color:black;width: 90px;height: 35px; margin-bottom: 10px;font-size: 16px;color:yellow" formaction="/logout" type="submit"  value="Home" >
+		<div class='buton' style="width: 300px;height:20px;margin-top:7px;">
+      <input style="background-color:rgb(255,100,100);border-color:rgb(255,100,100);width: 150px;height: 35px;margin-left:650px;font-size: 16px;color:black" formaction="/logout" type="submit"  value="Home" >
     </div>
 	</form>
 	<div class="container">
@@ -22,20 +23,22 @@
 	</div> 
 	<div class="form-group">
 		<label for="Studentid">Student ID</label>
-		<input type="number" id="Studentid" name="Studentid" class="form-control" placeholder="Enter your ID here"/>
+		<input type="number" id="Studentid" name="Studentid" class="form-control"/>
 	</div>
 	<div class="form-group">
 		<label for="Schoolid">School ID</label>
-		<input type="number" id="Schoolid" name="Schoolid" class="form-control" placeholder="Enter your ID here"/>
+		<input type="number" id="Schoolid" name="Schoolid" class="form-control"/>
 	</div>
 	<div class="form-group">
 		<label for="Password">Password</label>
-		<input type="Password" id="Password" name="Password" class="form-control" placeholder="Enter password here" />
+		<input type="Password" id="Password" name="Password" class="form-control"/>
 	</div>  
 	<div class='buton'>
-	<input style="background-color: blue; font-size: 16px; border-color: blue;" type="submit"  value="Login" >
+	<input style="background-color: rgb(89,198,247); font-size: 16px; border-color: rgb(89,198,247);color:white" type="submit"  value="Login" >
 	</div>
-	<a href="/changePassStud">Click here to change Login Credentials.</a>
+	<!-- <a href="/changePassStud">Click here to change Login Credentials.</a> -->
+	<br>
+	<input type="button" style="color:white;background-color: rgb(89,198,247); width:400px ; font-size: 17px; border-color: rgb(89,198,247);" onclick="location.href='/changePassStud';" value="Click here to change Login Credentials." />
 	</form>	       
     </div>
     </body>

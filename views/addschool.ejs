@@ -11,50 +11,51 @@
     <body>
     <h3><center>Supervisor Dashboard : Add New School<center></h3>
       <form action="/logout" method="post">
-        <div class='buton' style="width: 300px;height:20px;background-color:yellow;margin-top:7px;">
-          <input style="background-color:black;width: 90px;height: 35px; margin-bottom: 10px;font-size: 16px;color:yellow" formaction="/logout" type="submit"  value="Logout" >
-          <br>
-          <input style="background-color:black;width: 90px;height: 35px; margin-bottom: 10px;font-size: 16px;color:yellow" formaction="/backSupervisor" type="submit"  value="Home" >
+        <div class='buton' style="width: 300px;height:20px;margin-top:0px;">
+          <input style="border-color:rgb(89,198,247);background-color:rgb(89,198,247);width: 90px;height: 35px; margin-top: 690px;margin-left:575px; font-size: 16px;color:white" formaction="/logout" type="submit"  value="Logout" >
+        </div>
+        <div class='buton' style="width: 300px;height:20px;margin-top:0px;">
+          <input style="border-color:rgb(89,198,247);background-color:rgb(89,198,247);width: 90px;height: 35px; margin-top: 670px;margin-left:775px;font-size: 16px;color:white" formaction="/backSupervisor" type="submit"  value="Home" >
         </div>
     </form >
     
      <div class="container">
         <form id ="contact" action="/addNewSchool" method="post">
-		<div style="max-width: 450px; background-color: green; font-size: 18px; text-align:  center;">
+		<div style="max-width: 450px; background-color: rgb(89,198,247); font-size: 18px; text-align:  center;">
 			<strong></strong><%= Error %>
-			<strong ><a style="color:red" href="/addSchoolNotify"><%=Link%></a></strong>
+			<strong ><a style="color:rgb(89,198,247)" href="/addSchoolNotify"><%=Link%></a></strong>
         </div>    
          <h3>Enter Details</h3>     
             <div>
                   <label for="schoolID">School ID</label>
-                  <input type="number" id="schoolID" name="schoolID" placeholder="Enter ID" required/>
+                  <input type="number" id="schoolID" name="schoolID" required/>
             </div>
 			<div>
                   <label for="schoolName">School Name</label>
-                  <input type="text" id="schoolName" name="schoolName" placeholder="Enter Name" required/>
+                  <input type="text" id="schoolName" name="schoolName" required/>
             </div>
 			<div>
                   <label for="schoolPIN">School PIN Code</label>
-                  <input type="number" id="schoolPIN" name="schoolPIN" placeholder="Enter PIN" required/>
+                  <input type="number" id="schoolPIN" name="schoolPIN" required/>
             </div>
 			<div>
                   <label for="schoolEmail">School Email ID</label>
-                  <input type="text" id="schoolEmail" name="schoolEmail" placeholder="Enter Email ID" required/>
+                  <input type="text" id="schoolEmail" name="schoolEmail" required/>
             </div>
 			<div>
                   <label for="schoolMobile">School Mobile</label>
-                  <input type="number" id="schoolMobile" name="schoolMobile" placeholder="Enter Mobile" required/>
+                  <input type="number" id="schoolMobile" name="schoolMobile" required/>
             </div>
 			<div>
                   <label for="schoolSID">School Supervisor ID</label>
-                  <input type="number" id="schoolSID" name="schoolSID" placeholder="Enter Supervisor ID" required/>
+                  <input type="number" id="schoolSID" name="schoolSID" required/>
             </div>
             <div>
                 <label for="New Password">New Password</label>
-                <input type="password" id="schoolPassword" name="schoolPassword" placeholder="Enter a New Login Password" required/>
+                <input type="password" id="schoolPassword" name="schoolPassword" required/>
             </div>
             <div class='buton'>
-				<input style="background-color: blue; font-size: 16px; border-color: blue;" type="submit"  value="Add School" >
+				<input style="color:white;background-color: rgb(89,198,247); font-size: 16px; border-color: rgb(89,198,247);" type="submit"  value="Add School" >
             </div>
         </form>
     </div>

@@ -13,51 +13,52 @@
       
     <h3><center>Supervisor Dashboard : Add New Transporter</center></h3>
     <form action="/logout" method="post">
-      <div class='buton' style="width: 300px;height:20px;background-color:yellow;margin-top:7px;">
-        <input style="background-color:black;width: 90px;height: 35px; margin-bottom: 10px;font-size: 16px;color:yellow" formaction="/logout" type="submit"  value="Logout" >
-        <br>
-        <input style="background-color:black;width: 90px;height: 35px; margin-bottom: 10px;font-size: 16px;color:yellow" formaction="/backSupervisor" type="submit"  value="Home" >
+      <div class='buton' style="width: 300px;height:20px;margin-top:0px;">
+        <input style="border-color:rgb(89,198,247);background-color:rgb(89,198,247);width: 90px;height: 35px; margin-top: 690px;margin-left:575px; font-size: 16px;color:white" formaction="/logout" type="submit"  value="Logout" >
+      </div>
+      <div class='buton' style="width: 300px;height:20px;margin-top:0px;">
+        <input style="border-color:rgb(89,198,247);background-color:rgb(89,198,247);width: 90px;height: 35px; margin-top: 670px;margin-left:775px;font-size: 16px;color:white" formaction="/backSupervisor" type="submit"  value="Home" >
       </div>
   </form >
      <div class="container">
      
         <form id ="contact" action="/addNewTransporter" method="post">
             
-         <div style="max-width: 450px; background-color: green; font-size: 18px; text-align:  center;">
+         <div style="max-width: 450px; background-color: rgb(89,198,247); font-size: 18px; text-align:  center;">
           <strong></strong><%= Error %>
-          <strong ><a style="color:red" href="/addCatererNotify"><%=Link%></a></strong>
+          <strong ><a style="color:rgb(89,198,247)" href="/addCatererNotify"><%=Link%></a></strong>
         </div>    
          <h3>Enter Details</h3>
 <div>
-                  <label for="transporterID">transporter ID</label>
-                  <input type="number" id="transporterID" name="transporterID" placeholder="Enter ID" required/>
+                  <label for="transporterID">Transporter ID</label>
+                  <input type="number" id="transporterID" name="transporterID" required/>
             </div>
 			<div>
-                  <label for="transporterName">transporter Name</label>
-                  <input type="text" id="transporterName" name="transporterName" placeholder="Enter Name" required/>
+                  <label for="transporterName">Transporter Name</label>
+                  <input type="text" id="transporterName" name="transporterName" required/>
             </div>
 			<div>
-                  <label for="transporterPIN">transporter PIN Code</label>
-                  <input type="number" id="transporterPIN" name="transporterPIN" placeholder="Enter PIN" required/>
+                  <label for="transporterPIN">Transporter PIN Code</label>
+                  <input type="number" id="transporterPIN" name="transporterPIN" required/>
             </div>
 			<div>
-                  <label for="transporterEmail">transporter Email ID</label>
-                  <input type="text" id="transporterEmail" name="transporterEmail" placeholder="Enter Email ID" required/>
+                  <label for="transporterEmail">Transporter Email ID</label>
+                  <input type="text" id="transporterEmail" name="transporterEmail" required/>
             </div>
 			<div>
-                  <label for="transporterMobile">transporter Mobile</label>
-                  <input type="number" id="transporterMobile" name="transporterMobile" placeholder="Enter Mobile" required/>
+                  <label for="transporterMobile">Transporter Mobile</label>
+                  <input type="number" id="transporterMobile" name="transporterMobile" required/>
             </div>
 			<div>
-                  <label for="transporterSID">transporter Supervisor ID</label>
-                  <input type="number" id="transporterSID" name="transporterSID" placeholder="Enter Supervisor ID" required/>
+                  <label for="transporterSID">Transporter Supervisor ID</label>
+                  <input type="number" id="transporterSID" name="transporterSID" required/>
             </div>	
             <div>
                   <label for="New Password">New Password</label>
-                  <input type="password" id="transporterPassword" name="transporterPassword" placeholder="Enter a New Login Password" required/>
+                  <input type="password" id="transporterPassword" name="transporterPassword" required/>
             </div>	 
                   <div class='buton'>
-                  <input style="background-color: blue; font-size: 16px; border-color: blue;" type="submit"  value="Add Caterer" >
+                  <input style="color:white;background-color: rgb(89,198,247); font-size: 16px; border-color: rgb(89,198,247);" type="submit"  value="Add Caterer" >
                   </div>
         </form>
     </div>

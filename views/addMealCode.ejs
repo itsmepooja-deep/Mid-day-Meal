@@ -13,38 +13,38 @@
      
       
     <h3><center>Supervisor Dashboard : Add new Meal Code</h3>
-    <form action="/logout" method="post">
-      <div class='buton' style="width: 300px;height:20px;background-color:yellow;margin-top:7px;">
-        <input style="background-color:black;width: 90px;height: 35px; margin-bottom: 10px;font-size: 16px;color:yellow" formaction="/logout" type="submit"  value="Logout" >
-        <br>
-        <input style="background-color:black;width: 90px;height: 35px; margin-bottom: 10px;font-size: 16px;color:yellow" formaction="/backSupervisor" type="submit"  value="Home" >
-        
-      </div>
-  </form >
+      <form action="/logout" method="post">
+        <div class='buton' style="width: 300px;height:20px;margin-top:0px;">
+          <input style="border-color:rgb(89,198,247);background-color:rgb(89,198,247);width: 90px;height: 35px; margin-top: 520px;margin-left:575px; font-size: 16px;color:white" formaction="/logout" type="submit"  value="Logout" >
+        </div>
+        <div class='buton' style="width: 300px;height:20px;margin-top:0px;">
+          <input style="border-color:rgb(89,198,247);background-color:rgb(89,198,247);width: 90px;height: 35px; margin-top: 500px;margin-left:775px;font-size: 16px;color:white" formaction="/backSupervisor" type="submit"  value="Home" >
+        </div>
+    </form >
    
      <div class="container">
      
         <form id ="contact" action="/addDailyMealCode" method="post">
          <h3 style="font-size: 40px;margin-bottom:10px ;">Add MealCode Detail </h3>   
-         <div style="max-width: 450px; background-color: green; font-size: 18px; text-align:  center;">
+         <div style="max-width: 450px; background-color: rgb(89,198,247); font-size: 18px; text-align:  center;">
           <strong ></strong><label style="font-size: 16px;"><%= Error %></label>
-          <strong ><a style="color:red" href="/addMealCodeNotify"><%=Link%></a></strong>
+          <strong ><a style="color:rgb(89,198,247)" href="/addMealCodeNotify"><%=Link%></a></strong>
         </div>    
                  <h3>Enter Details</h3>
 <div>
-                  <label for="mealCode">meal Code</label>
-                  <input type="number" id="mealCode" name="mealCode" placeholder="Enter code" required/>
+                  <label for="mealCode">Meal Code</label>
+                  <input type="number" id="mealCode" name="mealCode" required/>
             </div>
 			<div>
-                  <label for="mealName">meal Name</label>
-                  <input type="text" id="mealName" name="mealName" placeholder="Enter Name" required/>
+                  <label for="mealName">Meal Name</label>
+                  <input type="text" id="mealName" name="mealName" required/>
             </div>
 			<div>
                   <label for="mealWeightPerServing">Weight Per Serving</label>
-                  <input type="number" id="mealWeightPerServing" name="mealWeightPerServing" placeholder="mealWeightPerServing" required/>
+                  <input type="number" id="mealWeightPerServing" name="mealWeightPerServing" required/>
             </div>
                   <div class='buton'>
-                  <input style="background-color: blue; font-size: 16px; border-color: blue;" type="submit"  value="AddMealCode" >
+                  <input style="color:white;background-color: rgb(89,198,247); font-size: 16px; border-color: rgb(89,198,247);" type="submit"  value="AddMealCode" >
                   </div>
       
         </form>

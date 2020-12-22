@@ -11,8 +11,8 @@
     <body>
     <h3><center>School Dashboard</center></h3>
     <form action="/logout" method="post">
-        <div class='buton' style="width: 300px;height:20px;background-color:yellow;margin-top:7px;">
-      <input style="background-color:black;width: 90px;height: 35px; margin-bottom: 10px;font-size: 16px;color:yellow"  type="submit"  value="Logout" >
+        <div class='buton' style="width: 300px;height:20px;margin-top:7px;">
+      <input style="border-color:rgb(89,198,247);background-color:rgb(89,198,247);width: 90px;height: 35px; margin-left:675px;margin-top: 500px;font-size: 16px;color:white;"  type="submit"  value="Logout" >
     </div>
 	</form >
 	<form action="/backSchoolLogin" method="post">
@@ -20,14 +20,14 @@
         <input type="hidden" id="Schoolid" name="Schoolid" value=<%= school %> readonly />
     </div>
     <br>
-	<div class='buton' style="width: 300px;height:20px;background-color:yellow;margin-top:7px;">
-        <input style="background-color:black;width: 90px;height: 35px; margin-bottom: 10px;font-size: 16px;color:yellow" type="submit"  value="Home" >
+	<div class='buton' style="width: 300px;height:20px;margin-top:7px;">
+        <input style="border-color:rgb(89,198,247);background-color:rgb(89,198,247);width: 90px;height: 35px; margin-left:675px; margin-top: 500px;font-size: 16px;color:white;" type="submit"  value="Home" >
     </div>
 	</form>
    <div class="container">
     <form id ="contact" action="/addStudent" method="post">
     <h3>Register Students</h3>
-    <div style="max-width: 450px; background-color: green; font-size: 18px; text-align:  center;">
+    <div style="max-width: 450px; background-color: rgb(89,198,247); font-size: 18px; text-align:  center;">
     <%= Error %>
     </div> 
     <div>
@@ -36,10 +36,10 @@
     </div> 
     <div>
     <label for="Studentid">Student ID</label>
-    <input type="Number" id="Studentid" name="Studentid" placeholder="Enter student ID" required />
+    <input type="Number" id="Studentid" name="Studentid" required />
     </div>
     <div class='buton'>
-    <input style="background-color: blue; font-size: 16px; border-color: blue;"  type="submit"  value="Add Student" >
+    <input style="color:white;background-color: rgb(89,198,247); font-size: 16px; border-color: rgb(89,198,247);"  type="submit"  value="Add Student" >
     </div>
     </form>
 	</div> 

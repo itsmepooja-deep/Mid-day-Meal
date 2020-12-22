@@ -13,8 +13,8 @@
     <body>
     <h3><center>Caterer Dashboard<center></h3>
     <form action="/logout" method="post">
-        <div class='buton' style="width: 300px;height:20px;background-color:yellow;margin-top:7px;">
-      <input style="background-color:black;width: 90px;height: 35px; margin-bottom: 10px;font-size: 16px;color:yellow"  type="submit"  value="Logout" >
+        <div class='buton' style="width: 300px;height:20px;margin-top:7px;">
+      <input style="background-color:rgb(89,198,247);border-color:rgb(89,198,247);width: 150px;height: 35px; margin-top:400px;margin-left: 640px;font-size: 16px;color:white"  type="submit"  value="Logout" >
     </div>
 	</form >
 	<form action="/backCatererLogin" method="post">
@@ -22,32 +22,33 @@
         <input type="hidden" id="Catererid" name="Catererid" value=<%= caterer %> readonly />
     </div>
     <br>
-    <div class='buton' style="width: 300px;height:20px;background-color:yellow;margin-top:7px;">
-        <input style="background-color:black;width: 90px;height: 35px; margin-bottom: 10px;font-size: 16px;color:yellow" type="submit"  value="Home" >
+    <div class='buton' style="width: 300px;height:20px;margin-top:7px;">
+        <input style="background-color:rgb(255,100,100);border-color:rgb(255,100,100);width: 150px;height: 35px;margin-left:650px;font-size: 16px;color:black" type="submit"  value="Home" >
     </div>
-	</form>
+    </form>
+    <br>
     <div class="container">
         <form  style="margin-top:0px;"id ="contact" action="/mealdetail" method="post">
             <div >
                 <label for="Catererid">Caterer ID</label>
                 <input style="width:62%" type="Number" id="Catererid" name="Catererid" value=<%= caterer%> readonly />
                 <div class='buton'>
-                    <input style="background-color: blue; font-size: 16px; border-color: blue;" type="submit"  value="View Meals" >
+                    <input style="background-color: rgb(89,198,247); font-size: 16px; border-color: rgb(89,198,247);color:white;" type="submit"  value="View Meals" >
                 </div>
             </div>
         </form >
     </div>
-    <form style=" margin-top:10px;width:900px;background-color:azure;margin-left: 225px;">   
+    <form style=" margin-top:10px;width:900px;background-color:grey;margin-left: 250px;">   
     <h3 style=" font-size: 20px;color: black;">Assigned Meals</h3>
     <table  style="border-collapse:collapse;color:black;width:900px;margin-top:10px;padding:10px;border: 2px solid grey  ;"  >
         <thead>
             <tr >
-				<th style=" padding:7px;border: 2px solid grey">Meal ID</th>
-                <th style=" padding:7px;border: 2px solid grey">Caterer ID</th>
-                <th style=" padding:7px;border: 2px solid grey">School ID</th>
-                <th style="padding:7px;border: 2px solid grey">Transporter ID</th>
-                <th style="padding:7px;border: 2px solid grey">Meal Code</th>
-                <th style="padding:7px;border: 2px solid grey">Number of Students</th>
+				<th style=" padding:7px;border: 2px solid black">Meal ID</th>
+                <th style=" padding:7px;border: 2px solid black">Caterer ID</th>
+                <th style=" padding:7px;border: 2px solid black">School ID</th>
+                <th style="padding:7px;border: 2px solid black">Transporter ID</th>
+                <th style="padding:7px;border: 2px solid black">Meal Code</th>
+                <th style="padding:7px;border: 2px solid black">Number of Students</th>
             </tr>
         </thead>
         <tbody>

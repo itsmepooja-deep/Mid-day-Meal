@@ -11,8 +11,8 @@
     <body>      
 	<h3><center>School Dashboard<center></h3>
 	<form action="/logout" method="post">
-        <div class='buton' style="width: 300px;height:20px;background-color:yellow;margin-top:7px;">
-		<input style="background-color:black;width: 150px;height: 35px; margin-bottom: 10px;font-size: 16px;color:yellow" type="submit"  value="Logout" >
+        <div class='buton' style="width: 300px;height:20px;margin-top:7px;">
+		<input style="border-color:rgb(89,198,247);background-color:rgb(89,198,247);width: 150px;height: 35px; margin-top: 800px;margin-left: 650px;font-size: 16px;color:white" type="submit"  value="Logout" >
 	</div>
 	</form>
 	<form action="/schoolAssignedMeal" method="post">
@@ -20,8 +20,8 @@
         <input type="hidden" id="Schoolid" name="Schoolid" value=<%= school %> readonly />
     </div>
     <br>
-	<div class='buton' style="width: 300px;height:20px;background-color:yellow;margin-top:7px;">
-        <input type="submit" style="background-color:black;width: 150px;height: 35px; margin-bottom: 10px;font-size: 16px;color:yellow" value="Assigned Meals" >
+	<div class='buton' style="width: 300px;height:20px;margin-top:7px;">
+        <input type="submit" style="border-color:rgb(255,100,100); background-color:rgb(255,100,100);width: 150px;height: 35px; margin-left: 650px;font-size: 16px;color:black" value="Assigned Meals" >
     </div>
 	</form>
 	<form action="/schoolAddStudent" method="post">
@@ -29,13 +29,13 @@
         <input type="hidden" id="Schoolid" name="Schoolid" value=<%= school %> readonly />
     </div>
     <br>
-	<div class='buton' style="width: 300px;height:20px;background-color:yellow;margin-top:7px;">
-        <input type="submit" style="background-color:black;width: 150px;height: 35px; margin-bottom: 10px;font-size: 16px;color:yellow" value="Add Beneficiaries" >
+	<div class='buton' style="width: 300px;height:20px;margin-top:7px;">
+        <input type="submit" style="border-color:rgb(255,100,100); background-color:rgb(255,100,100);width: 150px;height: 35px; margin-left: 650px;font-size: 16px;color:black" value="Add Students" >
     </div>
 	</form>
 	<div class="container">
     <form id ="contact" action="/addMealBySchool" method="post">
-		<div style="max-width: 450px; background-color: green; font-size: 18px; text-align:  center;">
+		<div style="max-width: 450px; background-color: rgb(89,198,247); font-size: 18px; text-align:  center;">
 		<%= Error %>
 		</div>
         <h3 style="font-size: 38px;">Add Accepted Meal Details</h3>   
@@ -45,7 +45,7 @@
         </div>
         <div>
               <label for="Catererid">Caterer ID</label>
-              <input type="number" id="Catererid" name="Catererid" placeholder="Catererid" required />
+              <input type="number" id="Catererid" name="Catererid" required />
         </div>
         <div >
             <label for="Schoolid">School ID</label>
@@ -53,22 +53,22 @@
         </div>
         <div>
 			<label for="Transportid">Transporter ID</label>
-            <input type="number" id="Transportid" name="Transportid" placeholder="Enter Transportid" required />
+            <input type="number" id="Transportid" name="Transportid" required />
         </div>
         <div >
 			<label for="MealCode">Meal Code</label>
-            <input type="number" id="MealCode" name="MealCode" placeholder="MealCode" required />
+            <input type="number" id="MealCode" name="MealCode" required />
         </div>
         <div >
 			<label for="NumberofStudent">Number of Student Present</label>
-			<input type="number" id="NumberofStudent" name="NumberofStudent" placeholder="Enter NumberofStudent" required />
+			<input type="number" id="NumberofStudent" name="NumberofStudent" required />
         </div>
         <div >
             <label for="IotMetrics">IoT Metrics Score</label>
-            <input type="number" id="IotMetrics" name="IotMetrics" placeholder="Enter IotMetrics" required />
+            <input type="number" id="IotMetrics" name="IotMetrics" required />
          </div>
         <div class='buton'>
-            <input style="background-color: blue; font-size: 16px; border-color: blue;" type="submit"  value="Accept Meal" >
+            <input style="background-color: rgb(89,198,247); font-size: 16px; border-color: rgb(89,198,247);" type="submit"  value="Accept Meal" >
         </div>
     </form>
     </div>
