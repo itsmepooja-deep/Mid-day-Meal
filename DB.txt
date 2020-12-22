@@ -1,0 +1,41 @@
+drop database middaymeals;
+create database middaymeals;
+use middaymeals;
+
+create table assignedMeals(mealID int primary key auto_increment,catererID int, schoolID int,
+transporterID int, mealCode int, catererStatus int, schoolStatus int, transporterStatus int,
+studentcount int, status int,feedbackstatus int);
+
+create table supervisorLogin(supervisorID int primary key, passkey varchar(70));
+
+create table catererLogin(catererID int primary key, passkey varchar(70));
+
+create table schoolLogin(schoolID int primary key, passkey varchar(70));
+
+create table transporterLogin(transporterID int primary key, passkey varchar(70));
+
+create table mealCode(mealCode int primary key, mealName varchar(50), expectedWeightPerServing
+int);
+
+create table feedbackBuffer(mealID int primary key, expectedCount int, actualCount int, aggregate int);
+
+create table catererMealDetails(mealID int primary key, catererID int, schoolID int, transporterID int,
+IoTMetricsScore int, mealcode int, studentCount int, preparationTime timestamp);
+
+create table studentLogin(studentID int, schoolID int, passkey varchar(70));
+ALTER TABLE studentLogin ADD PRIMARY KEY (studentID, schoolID);
+
+create table blockchainHash(mealID int primary key, catererHash varchar(70), schoolHash varchar(70),
+feedbackHash varchar(70));
+
+create table schoolDetails(schoolID int primary key, schoolName varchar(50), PINCode int, email
+varchar(50), mobile bigint, supervisorID int);
+
+create table catererDetails(catererID int primary key, catererName varchar(50), PINCode int, email
+varchar(50), mobile bigint, supervisorID int);
+
+create table transporterDetails(transporterID int primary key, transporterName varchar(50), PINCode
+int, email varchar(50), mobile bigint, supervisorID int);
+
+create table schoolMealDetails(mealID int primary key, catererID int, schoolID int, transporterID int,
+IoTMetricsScore int, mealcode int, studentCount int, acceptanceTime timestamp);

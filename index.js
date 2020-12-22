@@ -14,7 +14,8 @@ var mysql = require('mysql');
 var provider =ethers.getDefaultProvider('ropsten');
 app.use(express.static('public'));
 app.use(bodyParser());
-var privateKey='5DC7E856E2C05D5D80C4B259EB8401382A322C271E941617D5BE174252FDF016';
+var privateKey='3639444b019b1974faee144e9ee988ce74dba01784ddd918b6a9cddb338bb41d';
+// var privateKey='5DC7E856E2C05D5D80C4B259EB8401382A322C271E941617D5BE174252FDF016';
 var wallet = new ethers.Wallet(privateKey,provider);
 var conn = mysql.createConnection({
 host: "localhost",
@@ -32,8 +33,22 @@ else
 }); 
 
 
-const address='0x04e607EEC737d858948056e00676c2256F6F2d5a';//Address of deployed contract
+const address='0x54855956b054cFc06e3a063521eef271d4Fa3fa4';//Address of deployed contract
 const abi=[
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "getData",
+		"outputs": [
+			{
+				"name": "",
+				"type": "string"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
 	{
 		"constant": false,
 		"inputs": [
@@ -59,22 +74,9 @@ const abi=[
 		],
 		"name": "Meal",
 		"type": "event"
-	},
-	{
-		"constant": true,
-		"inputs": [],
-		"name": "getData",
-		"outputs": [
-			{
-				"name": "",
-				"type": "string"
-			}
-		],
-		"payable": false,
-		"stateMutability": "view",
-		"type": "function"
 	}
-];
+]
+
 const contract = new ethers.Contract(address,abi,wallet);
 
 

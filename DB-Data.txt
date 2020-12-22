@@ -1,0 +1,27 @@
+insert into supervisorLogin values(1001, 123);
+
+insert into catererLogin values(2001, 123);
+insert into catererLogin values(2002, 123);
+
+insert into catererDetails values(2001, 'Vedpal', 201005, 'vedpal.sudesh@yahoo.com', 9991294323, 1001);
+insert into catererDetails values(2002, 'Sudesh', 201008, 'sudesh.vedpal@yahoo.com', 3234921999, 1001);
+
+insert into transporterLogin values(3001, 123);
+insert into transporterLogin values(3002, 123);
+
+insert into transporterDetails values(3001, 'Nitin', 201010, 'nitin.tushit@gmail.com', 9123048181, 1001);
+insert into transporterDetails values(3002, 'Neil', 201012, 'Neil.nitayra@gmail.com', 9328403912, 1001);
+
+insert into schoolLogin values(4001, 123);
+insert into schoolLogin values(4002, 123);
+
+insert into schoolDetails values(4001, 'Jogi Public School Meerut', 111002, 'jogi@jpsm.org.in', 9329120594, 1001);
+insert into schoolDetails values(4002, 'Anju Govt. School', 111005, 'anju@ags.org.in', 8234823042, 1001);
+
+insert into studentLogin values(5001 ,4001 ,123);
+insert into studentLogin values(5002 ,4001 ,123);
+insert into studentLogin values(6001 ,4002 ,123);
+insert into studentLogin values(6002 ,4002 ,123);
+
+insert into mealCode values(10, 'Rajma Chawal', 350);
+insert into mealCode values(11, 'Shahi Paneer', 350);
