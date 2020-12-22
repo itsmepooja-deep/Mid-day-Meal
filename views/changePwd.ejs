@@ -1,0 +1,55 @@
+<html lang="en">
+    <head >
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" type="text/css" href="/css/main.css">
+        
+<body>
+    <h3><center>Secure and Transparent Mid Day Meals using Blockchain and IoT</center></h3>
+    <form action="/logout" method="post">
+		<div class='buton' style="width: 300px;height:20px;background-color:yellow;margin-top:7px;">
+        
+			<input style="background-color:black;width:128px;height: 35px; margin-bottom: 10px;font-size: 16px;color:white" formaction="/logout" type="submit"  value="Login" >
+		</div>
+	</form >
+    <div class="container">
+		<form id ="contact" action="/changePassword" method="post">
+			<h3>Change Password</h3>
+			<div style="max-width: 450px; background-color: green; font-size: 18px; text-align:  center;">
+			<strong></strong><%= Error %>
+			</div> 
+			<div class="form-group">
+			<label for="Loginid">Login ID</label>
+			<input type="String" id="Loginid" name="Loginid" class="form-control" placeholder="Enter user ID here"/>
+			</div>
+			<div class="form-group">
+			<label for="Password">Password</label>
+			<input type="Password" id="Password" name="Password" class="form-control" placeholder="Enter password here" />
+			</div>
+			<div class="form-group">
+			<label for="NewPassword">New Password</label>
+			<input type="Password" id="NewPassword" name="NewPassword" class="form-control" placeholder="Enter new password here" />
+			</div>
+			<p><center>Please select your role</center></p>
+			<div class="radio-inline">
+			<label style="margin-right:5%;"for="School">
+            <input Style="width:8%;"type="radio" id="School" name="Role" value="School">
+            School</label>
+			<label style="margin-left:0% ;"for="Caterer">
+            <input Style="width:4%" type="radio" id="Transporter" name="Role" value="Transporter">
+            Transporter</label>
+			<label style="margin-left:0% ;"for="Caterer">
+            <input Style="width:4%" type="radio" id="Caterer" name="Role" value="Caterer">
+            Caterer</label>
+			</div>
+			<div class='buton'>
+			<input style="background-color: blue; font-size: 16px; border-color: blue;" type="submit"  value="Update Password" >
+			</div>
+			</form>
+			<center>
+			</div>
+			</div>
+</body> 
+</head>
+</html 

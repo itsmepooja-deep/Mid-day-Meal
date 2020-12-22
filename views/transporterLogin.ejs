@@ -1,0 +1,54 @@
+<html lang="en">
+    <head >
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" type="text/css" href="css/main.css">
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    </head>
+    <body>
+    <h3><center>Transporter Dashboard<center></h3>
+	<% tid=transporter%>
+    <form action="/logout" method="post">
+        <div class='buton' style="width: 300px;height:20px;background-color:yellow;margin-top:7px;">
+		<input style="background-color:black;width: 150px;height: 35px; margin-bottom: 10px;font-size: 16px;color:yellow" type="submit"  value="Logout" >
+	</div>
+	</form>
+	<form action="/transporterAssignedMeal" method="post">
+	<div class='buton'>
+        <input type="hidden" id="Transporterid" name="Transporterid" value=<%= transporter %> readonly />
+    </div>
+    <br>
+	<div class='buton' style="width: 300px;height:20px;background-color:yellow;margin-top:7px;">
+        <input type="submit" style="background-color:black;width: 150px;height: 35px; margin-bottom: 10px;font-size: 16px;color:yellow" value="Assigned Meals" >
+    </div>
+	</form>
+    </div>
+	</form >
+    <div class="container">
+    <form id ="contact" action="/acceptMealByTransporter" method="post">
+		<div style="max-width: 450px; background-color: green; font-size: 18px; text-align:  center;">
+		<%= Error %>
+		</div>
+        <h3 style="font-size: 38px;">Accept Shipment</h3>   
+        <div>
+            <label for="Mealid">Meal ID</label>
+            <input type="Number" id="Mealid" name="Mealid"/>
+        </div>
+        <div>
+              <label for="Transporterid">Transporter ID</label>
+              <input type="number" id="Transporterid" name="Transporterid" value=<%= transporter %> readonly />
+        </div>
+        <div>
+            <label for="Schoolid">School ID</label>
+            <input type="number" id="Schoolid" name="Schoolid" placeholder="Schoolid" required />
+        </div>
+        <div class='buton'>
+            <input style="background-color: blue; font-size: 16px; border-color: blue;" type="submit"  value="Accept Shipment" >
+        </div>
+    </form>
+    </div>
+    </body>
+    </html>

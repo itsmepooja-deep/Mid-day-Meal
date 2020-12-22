@@ -1,0 +1,69 @@
+<html lang="en">
+    <head >
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" type="text/css" href="css/main.css">
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    </head>
+    <body>
+    <h3><center>Caterer Dashboard<center></h3>
+	<% cid=caterer%>
+    <form action="/logout" method="post">
+         <div class='buton' style="width: 300px;height:20px;background-color:yellow;margin-top:7px;">
+		<input style="background-color:black;width: 150px;height: 35px; margin-bottom: 10px;font-size: 16px;color:yellow" type="submit"  value="Logout" >
+	</div>
+	</form>
+	<form action="/catererAssignedMeal" method="post">
+	<div class='buton'>
+        <input type="hidden" id="Catererid" name="Catererid" value=<%= caterer %> readonly />
+    </div>
+	<div class='buton' style="width: 300px;height:20px;background-color:yellow;margin-top:7px;"></div>
+        <input type="submit" style="background-color:black;width: 150px;height: 35px; margin-bottom: 10px;font-size: 16px;color:yellow" value="Assigned Meals" >
+    </div>
+	</form>
+    </div>
+	</form >
+    <div class="container">
+    <form id ="contact" action="/addMealByCaterer" method="post">
+		<div style="max-width: 450px; background-color: green; font-size: 18px; text-align:  center;">
+		<%= Error %>
+		</div>
+        <h3 style="font-size: 38px;">Add Prepared Meal Details</h3>   
+        <div>
+            <label for="Mealid">Meal ID</label>
+            <input type="Number" id="Mealid" name="Mealid"/>
+        </div>
+        <div>
+              <label for="Catererid">Caterer ID</label>
+              <input type="number" id="Catererid" name="Catererid" value=<%= caterer %> readonly />
+        </div>
+        <div >
+            <label for="Schoolid">School ID</label>
+            <input type="number" id="Schoolid" name="Schoolid" placeholder="Schoolid" required />
+        </div>
+        <div>
+			<label for="Transportid">Transporter ID</label>
+            <input type="number" id="Transportid" name="Transportid" placeholder="Enter Transportid" required />
+        </div>
+        <div >
+			<label for="MealCode">Meal Code</label>
+            <input type="number" id="MealCode" name="MealCode" placeholder="MealCode" required />
+        </div>
+        <div >
+			<label for="NumberofStudent">Number of Student</label>
+			<input type="number" id="NumberofStudent" name="NumberofStudent" placeholder="Enter NumberofStudent" required />
+        </div>
+        <div >
+            <label for="IotMetrics">IoT Metrics Score</label>
+            <input type="number" id="IotMetrics" name="IotMetrics" placeholder="Enter IotMetrics" required />
+         </div>
+        <div class='buton'>
+            <input style="background-color: blue; font-size: 16px; border-color: blue;" type="submit"  value="Add and Dispatch Meal" >
+        </div>
+    </form>
+    </div>
+    </body>
+    </html>

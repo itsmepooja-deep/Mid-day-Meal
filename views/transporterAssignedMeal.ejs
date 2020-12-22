@@ -1,0 +1,73 @@
+<html lang="en">
+    <head >
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" type="text/css" href="css/main.css">
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    </head>
+    <body>
+    <h3><center>Transporter Dashboard<center></h3>
+    <form action="/logout" method="post">
+    <div class='buton' style="width: 300px;height:20px;background-color:yellow;margin-top:7px;">
+      <input style="background-color:black;width: 90px;height: 35px; margin-bottom: 10px;font-size: 16px;color:yellow"  type="submit"  value="Logout" >
+    </div>
+	</form >
+	<form action="/backTransporterLogin" method="post">
+	<div>
+        <input type="hidden" id="Transporterid" name="Transporterid" value=<%= transporter %> readonly />
+    </div>
+    <br>
+    <div class='buton' style="width: 300px;height:20px;background-color:yellow;margin-top:7px;">
+        <input style="background-color:black;width: 90px;height: 35px; margin-bottom: 10px;font-size: 16px;color:yellow" type="submit"  value="Home" >
+    </div>
+	</form>
+    <div class="container">
+        <form  style="margin-top:0px;"id ="contact" action="/mealdetailtransporter" method="post">
+            <div >
+                <label for="Transporterid">Transporter ID</label>
+                <input style="width:62%" type="Number" id="Transporterid" name="Transporterid" value=<%= transporter%> readonly />
+                <div class='buton'>
+                    <input style="background-color: blue; font-size: 16px; border-color: blue;" type="submit"  value="View Meals" >
+                </div>
+            </div>
+        </form >
+    </div>
+    <form style=" margin-top:10px;width:900px;background-color:azure;margin-left: 225px;">   
+    <h3 style=" font-size: 20px;color: black;">Assigned Meals</h3>
+    <table  style="border-collapse:collapse;color:black;width:900px;margin-top:10px;padding:10px;border: 2px solid grey  ;"  >
+        <thead>
+            <tr >
+				<th style=" padding:7px;border: 2px solid grey">Meal ID</th>
+                <th style=" padding:7px;border: 2px solid grey">Caterer ID</th>
+                <th style=" padding:7px;border: 2px solid grey">School ID</th>
+                <th style="padding:7px;border: 2px solid grey">Transporter ID</th>
+                <th style="padding:7px;border: 2px solid grey">Meal Code</th>
+                <th style="padding:7px;border: 2px solid grey">Number of Students</th>
+            </tr>
+        </thead>
+        <tbody>
+            <%if (records.length>0){ %>
+            <% records.forEach(function(row){ %>
+                <tr style="padding: 7px;">
+                <td style=" padding:7px;border: 2px solid grey"><%= row.mealID %></td>
+				<td style=" padding:7px;border: 2px solid grey"><%= row.catererID %></td>
+                <td style=" padding:7px;border: 2px solid grey"><%= row.schoolID %></td>
+                <td style=" padding:7px;border: 2px solid grey"><%= row.transporterID %></td>
+                <td style=" padding:7px;border: 2px solid grey"><%= row.mealCode %></td>
+                <td style=" padding:7px;border: 2px solid grey"><%= row.studentcount %></td> 
+                </tr>
+             <% })}else{ %>
+                <tr>
+                <td colspan="5">No Record Found</td>
+                </tr>
+             <% } %>
+        </tbody>      
+    </table>
+    </form>           
+</body>
+</html>

@@ -1,0 +1,49 @@
+<html lang="en">
+    <head >
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" type="text/css" href="css/main.css">
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    </head>
+    <body>      
+	<h3><center>Beneficiary Dashboard : Rate your meal<center></h3>
+	<form action="/logout" method="post">
+    <div class='buton' class='buton' style="width: 180x;height:50px;background-color:black;margin-top:17px;">
+		<input style="background-color:black;width: 150px;height: 35px; margin-bottom: 10px;font-size: 16px;color:white" type="submit"  value="LogOut" >
+	</div>
+	</form>
+	<div class="container">
+	<form id="contact" action="/addFeedback" method="post">
+	<center>
+	<h4>Please rate meal</h4>
+	<h4>1=Lowest, 10=Highest</h4>
+	</center>
+	<div>
+        <input type="hidden" id="Schoolid" name="Schoolid" value=<%= school %> readonly />
+    </div>
+	<div>
+		<label for "Studentid">Student ID</label>
+        <input type="number" id="Studentid" name="Studentid" value=<%= student %> readonly />
+    </div>
+	<div>
+		<label for "Mealname">Meal Served</label>
+        <input type="String" id="Mealname" name="Mealname" value=<%= mn %> readonly />
+    </div>
+	<div>
+		<label for "Mealid">Meal ID</label>
+        <input type="number" id="Mealid" name="Mealid" value=<%= mid %> readonly />
+    </div>
+	<div>
+		<label for "Rating">Rating</label>
+        <input type="number" id="Rating" name="Rating" placeholder="Rate your meal" required/>
+    </div>
+	<div class='buton'>
+		<input style="background-color: blue; font-size: 16px; border-color: blue;"  type="submit"  value="Submit Feedback" >
+    </div>
+	</form>
+	</div>
+    </body>
+    </html>

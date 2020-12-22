@@ -1,0 +1,62 @@
+<html lang="en">
+    <head >
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" type="text/css" href="css/main.css">
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    </head>
+    <body>
+    <h3><center>Supervisor Dashboard : Add New School<center></h3>
+      <form action="/logout" method="post">
+        <div class='buton' style="width: 300px;height:20px;background-color:yellow;margin-top:7px;">
+          <input style="background-color:black;width: 90px;height: 35px; margin-bottom: 10px;font-size: 16px;color:yellow" formaction="/logout" type="submit"  value="Logout" >
+          <br>
+          <input style="background-color:black;width: 90px;height: 35px; margin-bottom: 10px;font-size: 16px;color:yellow" formaction="/backSupervisor" type="submit"  value="Home" >
+        </div>
+    </form >
+    
+     <div class="container">
+        <form id ="contact" action="/addNewSchool" method="post">
+		<div style="max-width: 450px; background-color: green; font-size: 18px; text-align:  center;">
+			<strong></strong><%= Error %>
+			<strong ><a style="color:red" href="/addSchoolNotify"><%=Link%></a></strong>
+        </div>    
+         <h3>Enter Details</h3>     
+            <div>
+                  <label for="schoolID">School ID</label>
+                  <input type="number" id="schoolID" name="schoolID" placeholder="Enter ID" required/>
+            </div>
+			<div>
+                  <label for="schoolName">School Name</label>
+                  <input type="text" id="schoolName" name="schoolName" placeholder="Enter Name" required/>
+            </div>
+			<div>
+                  <label for="schoolPIN">School PIN Code</label>
+                  <input type="number" id="schoolPIN" name="schoolPIN" placeholder="Enter PIN" required/>
+            </div>
+			<div>
+                  <label for="schoolEmail">School Email ID</label>
+                  <input type="text" id="schoolEmail" name="schoolEmail" placeholder="Enter Email ID" required/>
+            </div>
+			<div>
+                  <label for="schoolMobile">School Mobile</label>
+                  <input type="number" id="schoolMobile" name="schoolMobile" placeholder="Enter Mobile" required/>
+            </div>
+			<div>
+                  <label for="schoolSID">School Supervisor ID</label>
+                  <input type="number" id="schoolSID" name="schoolSID" placeholder="Enter Supervisor ID" required/>
+            </div>
+            <div>
+                <label for="New Password">New Password</label>
+                <input type="password" id="schoolPassword" name="schoolPassword" placeholder="Enter a New Login Password" required/>
+            </div>
+            <div class='buton'>
+				<input style="background-color: blue; font-size: 16px; border-color: blue;" type="submit"  value="Add School" >
+            </div>
+        </form>
+    </div>
+	</body>
+    </html>
