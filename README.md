@@ -28,6 +28,10 @@ Main aim of this project is to demonstrate how disruptive technologies such as t
   ```
   Visit http://localhost:3001/ to view the application
   
+  ## Under Guidance of
+  
+  * [Pooja Singhal](https://github.com/itsmepooja-deep)
+  
   ## Authors
 
 * [Jatin Sachdeva](https://github.com/Jatin11-S)
